@@ -1,6 +1,5 @@
-import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
 import Comments from '@ckeditor/ckeditor5-comments/src/comments';
-import Watchdog from '@ckeditor/ckeditor5-watchdog/src/watchdog';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
@@ -13,12 +12,11 @@ import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
-import Image from '@ckeditor/ckeditor5-image/src/image';
+import Image from '@ckeditor/ckeditor5-image/src/imageupload';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
-import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -33,11 +31,10 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Enter from '@ckeditor/ckeditor5-enter/src/enter';
-import ShiftEnter from '@ckeditor/ckeditor5-enter/src/shiftenter';
 
-class ClassicEditor extends ClassicEditorBase {}
+class CKEditor5 extends InlineEditorBase {}
 
-ClassicEditor.builtinPlugins = [
+CKEditor5.builtinPlugins = [
 	Alignment,
 	Autoformat,
 	BlockQuote,
@@ -74,7 +71,7 @@ ClassicEditor.builtinPlugins = [
 	ShiftEnter
 ];
 
-ClassicEditor.defaultConfig = {
+CKEditor5.defaultConfig = {
 	toolbar: [
 		'heading',
 		'|',
@@ -128,5 +125,5 @@ ClassicEditor.defaultConfig = {
 };
 
 export default { 
-	ClassicEditor,
+	CKEditor5: ClassicEditor,
 };

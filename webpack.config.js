@@ -13,7 +13,7 @@ module.exports = {
 
 	output: {
 		// The name under which the editor will be exported.
-		library: 'ClassicEditor',
+		library: 'CKEditor5',
 		path: path.resolve(__dirname, 'build', 'js'),
 		filename: 'bundle.js',
 		libraryTarget: 'umd',
